@@ -2,9 +2,97 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/itemPageBg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/BGsideMainPage"
     tools:context=".itemPage">
+
+
+    <ImageView
+        android:id="@+id/itemPageImage"
+        android:layout_width="426dp"
+        android:layout_height="271dp"
+        android:contentDescription="@string/appname"
+        android:scaleType="centerCrop"
+        android:transitionName="itemImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/poor_things" />
+
+    <TextView
+        android:id="@+id/itemPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/appname"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemPageImage" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemBg"
+        android:layout_width="343dp"
+        android:layout_height="157dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemPageText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/itemPageDescroption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10sp"
+                    android:text="@string/appname"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/addTicket"
+        android:layout_width="96dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemBg"
+        app:layout_constraintVertical_bias="0.111"
+        app:srcCompat="@drawable/ticket" />
+
+    <TextView
+        android:id="@+id/itemParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemPageText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

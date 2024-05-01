@@ -1,7 +1,11 @@
 package com.example.machara.adapter;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.machara.R;
+import com.example.machara.itemPage;
 import com.example.machara.model.Item;
 
 import java.util.List;
@@ -39,7 +44,25 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         holder.itemImage.setImageResource(imageid);
         holder.itemTitle.setText(items.get(position).getTitle());
         holder.itemDescription.setText(items.get(position).getDescription());
-//        holder.itemDate.setText(items.get(position).getDate());
+        //        holder.itemDate.setText(items.get(position).getDate());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, itemPage.class);
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context,
+                        new Pair<View, String>(holder.itemImage, "itemImage"));
+
+                intent.putExtra("itemBg", Color.parseColor(items.get(holder.getAdapterPosition()).getColor()));
+                intent.putExtra("itemTitle",items.get(holder.getAdapterPosition()).getTitle());
+                intent.putExtra("itemImage", imageid);
+                intent.putExtra("itemDescription", items.get(holder.getAdapterPosition()).getDescription());
+                intent.putExtra("itemParticipants", items.get(holder.getAdapterPosition()).getParticipants());
+
+                context.startActivity(intent, options.toBundle());
+            }
+        });
+
 
     }
 
