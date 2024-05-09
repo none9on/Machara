@@ -1,7 +1,7 @@
 <resources>
     <string name="appname">MACHARA</string>
     <string name="hello">hello</string>
-    <string name="tickets">tickets</string>
+    <string name="tickets">cart</string>
     <string name="aboutus">about us</string>
     <string name="account">account</string>
     <string name="aboutitem">about:</string>

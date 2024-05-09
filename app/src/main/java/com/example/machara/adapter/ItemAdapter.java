@@ -44,7 +44,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         holder.itemImage.setImageResource(imageid);
         holder.itemTitle.setText(items.get(position).getTitle());
         holder.itemDescription.setText(items.get(position).getDescription());
-        //        holder.itemDate.setText(items.get(position).getDate());
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +58,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
                 intent.putExtra("itemImage", imageid);
                 intent.putExtra("itemDescription", items.get(holder.getAdapterPosition()).getDescription());
                 intent.putExtra("itemParticipants", items.get(holder.getAdapterPosition()).getParticipants());
+                intent.putExtra("itemRD", items.get(holder.getAdapterPosition()).getRD());
+                intent.putExtra("itemId", items.get(holder.getAdapterPosition()).getId());
+
+
 
                 context.startActivity(intent, options.toBundle());
             }
@@ -82,9 +86,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             itemBg = itemView.findViewById(R.id.itemBg);
             itemImage = itemView.findViewById(R.id.itemImage);
             itemTitle = itemView.findViewById(R.id.itemTitle);
-//            itemDate = itemView.findViewById(R.id.itemDate);
             itemDescription = itemView.findViewById(R.id.itemDescroption);
-
         }
     }
 

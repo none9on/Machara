@@ -4,17 +4,26 @@ public class Item {
 
 
     int id, category;
-    String img, title, description, color, participants;
+    String img, title, description, color, participants, RD;
 
-    public Item(int id, String img, String title, String description, String color, String participants, int category) {
+    public Item(int id, String img, String title, String description, String color, String participants, int category, String RD) {
         this.id = id;
         this.img = img;
         this.title = title;
-//        this.date = date;
+        this.RD = RD;
         this.description = description;
         this.color = color;
         this.participants = participants;
         this.category = category;
+
+    }
+
+    public String getRD() {
+        return RD;
+    }
+
+    public void setRD(String RD) {
+        this.RD = RD;
     }
 
     public int getCategory() {
@@ -57,13 +66,6 @@ public class Item {
         this.title = title;
     }
 
-//    public String getDate() {
-//        return date;
-//    }
-//
-//    public void setDate(String date) {
-//        this.date = date;
-//    }
 
     public String getDescription() {
         return description;
