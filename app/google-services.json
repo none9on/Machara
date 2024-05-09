@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "504712267954",
+    "project_id": "machara-d4c9c",
+    "storage_bucket": "machara-d4c9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504712267954:android:1256d792ea4d03758e61ab",
+        "android_client_info": {
+          "package_name": "com.example.machara"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmYjIbqj9QbbAOf2EWX5JkIC1M7ZO23Jo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

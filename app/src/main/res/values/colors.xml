@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="BGMainPage">#1D1D20</color>
 <color name="BGsideMainPage">#1D1D20</color>
+    <color name="textedit"> #2A2A32</color>
+    <color name="hint">#94949E</color>
 </resources>

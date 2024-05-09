@@ -7,6 +7,40 @@
     <string name="aboutitem">about:</string>
     <string name="date">date:</string>
     <string name="participants">participants:</string>
+    <string name="welcome">WELCOME</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
+    <string name="name">name</string>
+    <string name="namehint"> enter your name</string>
+    <string name="email">email</string>
+    <string name="emailhint">enter your email</string>
+    <string name="birthhint">enter your birthday (dd/mm/yy) </string>
+    <string name="birthday">date of birth (dd/mm/yy) </string>
+    <string name="gender">gender </string>
+    <string name="female">female </string>
+    <string name="male">male </string>
+    <string name="none">none</string>
+    <string name="modphone">enter your mobile phone (without +7)</string>
+    <string name="phone">phone no.</string>
+    <string name="password">password</string>
+    <string name="enterpass">enter your password</string>
+    <string name="passwordconf">confirm your password</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>
